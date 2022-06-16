@@ -1,0 +1,159 @@
+//responsivity
+$mobile: 375px;
+$desktop: 1440px;
+
+// colors
+$primaryOrange: hsl(25, 97%, 53%);
+$neutralWhite: hsl(0, 0%, 100%);
+$neutralLighGrey: hsl(217, 12%, 63%);
+$neutralMediumGrey: hsl(216, 12%, 54%);
+$neutralDarkBlue: hsl(213, 19%, 18%);
+$neutralVeryDarkBlue: hsl(216, 12%, 8%);
+
+//body copy
+$paragraph: 15px;
+$font: 'Overpass', sans-serif;
+$fontWeightBold: 700;
+$fontWeightRegular: 400;
+
+body
+{
+    background: $neutralVeryDarkBlue;
+    font-family: $font;
+    // margin: 0 1.25rem;
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 0.1px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .wrapper
+    {
+        padding: 1.25rem; //20px
+        border-radius: 0.625rem; //10px
+        background: linear-gradient(120deg, $neutralDarkBlue, $neutralVeryDarkBlue);
+
+        @media (min-width: $mobile)
+        {
+            width: 300px;
+        } 
+        .starIcon
+        {
+            background-color: rgba(128, 128, 128, 0.171);
+            padding: 10px;
+            border-radius: 50%;
+            margin-left: 10px;
+            
+        }
+        .secondaryImage
+        {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .headerTitle
+        {
+            margin-top: 15px;
+            padding: 0 15px;
+            margin-bottom: 5px;
+            color: $neutralWhite;
+            letter-spacing: 0.5px;
+            font-weight: $fontWeightBold;
+        }
+
+        .callToActionText
+        {
+            color: $neutralLighGrey;
+            line-height: 23px;
+            font-size: 13px;
+            padding: 0 15px;
+        }
+        .ratingButtons
+        {
+            margin: 20px 0;
+            margin-top: 25px;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            transition: all 0.3s ease-in-out;
+        
+            & li
+            {
+                list-style: none;
+
+                & button
+                {
+                    background-color: rgba(128, 128, 128, 0.171);
+                    color: $neutralMediumGrey;
+                    padding: 10px 15px;
+                    border: none;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transition: all 0.2s ease-in;
+
+                    &:hover
+                    {
+                        background-color: $primaryOrange;
+                        color: #fff;
+                    }
+                    &:focus
+                    {
+                        background-color: $neutralLighGrey;
+                    }
+                }
+            }
+        }
+        .submitButtonParent
+        {
+            display: flex;
+            justify-content: center;
+
+            .submitButton
+            {
+                margin-top: 5px;
+                padding: 15px 10px ;
+                border: none;
+                border-radius: 20px;
+                background-color: $primaryOrange;
+                width: 90%;
+                text-transform: uppercase;
+                color: $neutralWhite;
+                font-weight: $fontWeightBold;
+                letter-spacing: 1px;
+                cursor: pointer;
+
+                &:hover
+                {
+                    background-color: $neutralWhite;
+                    color: $primaryOrange;
+                }
+            }
+        }
+
+        .secondary
+        {
+            text-align: center;
+        }
+        .selectedNumberMessageParent
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .selectedNumberMessage
+            {
+                color: $primaryOrange;
+                background-color: rgba(128, 128, 128, 0.171);
+                padding: 10px;
+                border-radius: 25px;
+                display: inline-block;
+                font-size: 12px;
+            }
+        }
+
+    }
+
+}
